@@ -10,6 +10,13 @@ img {
   height: auto;
   display: block; 
 }
+
+img[alt="slide"] {
+  display: block;
+  margin: 20px auto 0 auto; 
+  max-width: 100%;
+  height: auto;
+}
 /* Barra superior */
 .barra_superior{
    background: linear-gradient(to right, #cc4e00, #6a0dad);
@@ -361,10 +368,13 @@ html {
   width: 100%; 
   text-align: center;
   margin: 0; 
-  font-size: 1.2em;
-  font-weight: bold;
-  color: rgb(243, 27, 38);
+  font-size: 15px;
+  color: rgb(72, 70, 70);
   background-color: rgb(194, 190, 190);
   padding: 20px 0; 
   box-sizing: border-box;
+}
+
+footer p{
+  color: rgb(72, 70, 70);
 }
