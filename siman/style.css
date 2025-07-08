@@ -358,9 +358,9 @@ html {
 }
 
 .footer-bottom {
-  width: 100%; /* ← Asegura que ocupe todo el ancho */
+  width: 100%; 
   text-align: center;
-  margin: 0; /* ← Elimina todos los márgenes */
+  margin: 0; 
   font-size: 1.2em;
   font-weight: bold;
   color: rgb(243, 27, 38);
