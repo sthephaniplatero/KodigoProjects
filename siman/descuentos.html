@@ -1,142 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descuentos Credisiman</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="icon" href="img/favicon-32x32.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descuentos Credisiman</title>
+  <link rel="stylesheet" href="descuentos.css" />
+  <link rel="icon" href="img/favicon-32x32.png" type="image/png" />
 </head>
- <div class="barra_superior">SIMAN, TU PROPIO CONCEPTO</div>
 <body>
-         <div class="top_bar">
-            <img src="img/image.png" alt="logo_siman">
-            <nav>
-                <a href="eventos.html">Proximos Eventos</a>
-                <a href="descuentos.html">Descuentos Credisiman</a>
-                <a href="index.html">Ofertas Exclusivas</a>
-                
-            </nav>
-            </div>
 
- <main>
-     
-    <div class="hero_img">
-    <img src="img/hero.jpeg" alt="hero">
-    </div>
+  <div class="barra_superior">SIMAN, TU PROPIO CONCEPTO</div>
 
-    <div class="descuento">
-     <h2>Descuentos Credisiman</h2>
-    </div>
+  <header class="top_bar">
+    <img src="img/image.png" alt="Logo Siman" />
+    <nav>
+      <a href="eventos.html">Próximos Eventos</a>
+      <a href="descuentos.html">Descuentos Credisiman</a>
+      <a href="index.html">Ofertas Exclusivas</a>
+    </nav>
+  </header>
 
-    <div class="card_container">
+  <main>
 
-      <div class="card1">
-        <img src="img/cards_01.webp" alt="visa_credisiman">
-      </div>
+    <div class="hero_image"></div>
 
-      <div class="card1_beneficios">
-        <ul>
-          <li>Tarjeta titular y adicionales con membresía GRATIS</li>
-          <li>Acumulas 1 Rombo de Oro por cada compra nacional e internacional</li>
-          <li>Retiros de efectivo 0% COMISIÓN en cajeros automáticos nacionales e internacionales</li>
-          <li>Compras más rápidas y seguras con tecnología chip sin contacto</li>
-          <li>Promociones y descuentos exclusivos en Siman y otros comercios</li>
-          <li>Podrás comprar en cualquier comercio nacional e internacional</li>
-        </ul>
-      </div>
+    <section class="descuento">
+      <h2>Membresias Credisiman</h2>
+    </section>
 
-      <div class="card2">
-        <img src="img/cards_02.webp" alt="credisiman">
-      </div>
+    <!-- Contenedor padre para tarjetas y formulario (flex container) -->
+    <div class="contenedor_tarjetas_formulario">
 
-      <div class="card2_beneficios">
-        <ul>
-          <li>Tarjeta titular y adicionales con membresía GRATIS</li>
-          <li>Eventos de acumulación a monedero todos los meses en departamentos seleccionados</li>
-          <li>Promociones y descuentos exclusivos en Siman y comercios del grupo</li>
-          <li>Hasta 48 meses plazo para comprar</li>
-          <li>Cuponera de descuentos de bienvenida con hasta 25%</li>
-          <li>Puedes comprar en: Siman, Prismamoda, Zara, Bershka, Pull&Bear, Stradivarius, Oysho, Xclaim, MAC Cosmetics, MacStore, Radioshack, Andián, Bistro, Maquilishuat</li>
-        </ul>
-        
-      </div>
+      <div class="card_container">
 
-    <div class="row">
-    <div class="col-md-12">
-      <form action="descuentos.html" method="post">
-        <h1> Solicita tu Targeta </h1>
-        
-        <fieldset>
-          
-          <legend><span class="top"></span> Tu informacion personal</legend>
-        
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" name="name">
+        <div class="tarjeta">
+          <article class="card1">
+            <img src="img/cards_01.webp" alt="Tarjeta Visa Credisiman" />
+          </article>
 
-          <label for="second_name"> Segundo Nombre:</label>
-          <input type="text" id="name" name="name">
-
-          <label for="last_name">Apellido:</label>
-          <input type="text" id="apellido" name="apellido">
-
-          <label for="identification">Numero de Dui:</label>
-          <input type="number" id="id" name="id">
-        
-          <label for="email">Email:</label>
-          <input type="email" id="mail" name="user_email">
-       
-        </fieldset>
-        <fieldset>  
-          <label>Tipo de Tarjeta</label>
-          <input type="checkbox" id="visa_credisiman" value="visa_credisiman" name="visa_credisiman"><label class="light" for="visa_credisiman">Visa Credisiman</label><br>
-          <input type="checkbox" id="credisiman" value="credisiman" name="credisiman"><label class="light" for="credisiman">Credisiman</label><br>
-         
-         </fieldset>
-       
-        <button type="submit">Solicitar</button>
-        
-       </form>
+          <article class="card1_beneficios">
+            <h3>Siman Visa</h3>
+            <ul>
+              <li>Tarjeta titular y adicionales con membresía GRATIS</li>
+              <li>Acumulas 1 Rombo de Oro por cada compra nacional e internacional</li>
+              <li>Retiros de efectivo 0% comisión en cajeros automáticos nacionales e internacionales</li>
+              <li>Compras más rápidas y seguras con tecnología chip sin contacto</li>
+              <li>Promociones y descuentos exclusivos en Siman y otros comercios</li>
+              <li>Podrás comprar en cualquier comercio nacional e internacional</li>
+            </ul>
+          </article>
         </div>
-      </div>
 
-    </div>
+        <div class="tarjeta">
+          <article class="card2">
+            <img src="img/cards_02.webp" alt="Tarjeta Credisiman" />
+          </article>
 
+          <article class="card2_beneficios">
+            <h3>Credisiman</h3>
+            <ul>
+              <li>Tarjeta titular y adicionales con membresía GRATIS</li>
+              <li>Eventos de acumulación a monedero todos los meses en departamentos seleccionados</li>
+              <li>Promociones y descuentos exclusivos en Siman y comercios del grupo</li>
+              <li>Hasta 48 meses plazo para comprar</li>
+              <li>Cuponera de descuentos de bienvenida con hasta 25%</li>
+              <li>Puedes comprar en: Siman, Prismamoda, Zara, Bershka, Pull&Bear, Stradivarius, Oysho, Xclaim, MAC Cosmetics, MacStore, Radioshack, Andián, Bistro, Maquilishuat</li>
+            </ul>
+          </article>
+        </div>
 
-    <div class="descuentos">
-      <h2>Descuentos exclusivos</h2>
-      <div class="card1">
-        <img src="img/bistro.jpeg" alt="bistro">
-        <p>15% Dcto. AL INSTANTE de Lunes a Domingo en menú BISTRO SIMAN LA GRAN VIA</p>
-      </div>
+      </div> <!-- fin card_container -->
 
-       <div class="card2">
-        <img src="img/cafe.jpeg" alt="cafe">
-        <p>10% Dcto. AL INSTANTE de Lunes a Domingo en menú CAFÉ SIMAN</p>
-      </div>
+      <section class="formulario">
+        <form action="descuentos.html" method="post">
+          <h1>Solicita tu tarjeta</h1>
 
-      <div class="card3">
-        <img src="img/comet.jpeg" alt="comet">
-        <p>10% Dcto. AL INSTANTE de Lunes a Domingo en menú COMET</p>
-      </div>
+          <fieldset>
+            <legend>Tu información personal</legend>
 
-      <div class="card4">
-        <img src="img/san_nicolas.jpeg" alt="san_nicolas">
-        <p>30% dcto. AL INSTANTE EN Farmacia San Nicolás - JULIO</p>
-      </div>
-
-    </div>
-
-
-
- </main>
-    
+            <label for="name">Nombres:</label>
+            <input type="text" id="name" name="names" />
 
 
-<footer>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" />
 
-    <footer class="footer">
+            <label for="id">Número de DUI:</label>
+            <input type="number" id="id" name="id" />
+
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email" />
+          </fieldset>
+
+          <fieldset>
+           <legend>Tipo de Tarjeta</legend>
+           <div class="radio-group">
+             <input type="radio" id="visa_credisiman" name="tipo_tarjeta" value="visa_credisiman" />
+             <label for="visa_credisiman">Visa Credisiman</label>
+           </div>
+           <div class="radio-group">
+             <input type="radio" id="credisiman" name="tipo_tarjeta" value="credisiman" />
+             <label for="credisiman">Credisiman</label>
+           </div>
+         </fieldset>
+
+          <button type="submit">Solicitar</button>
+        </form>
+      </section>
+
+    </div> 
+
+<section class="descuentos">
+  <h2>Descuentos exclusivos</h2>
+  <div class="descuentos-container">
+    <article>
+      <img src="img/bistro.jpeg" alt="Bistro">
+      <p>15% Dcto. en menú BISTRO SIMAN LA GRAN VIA</p>
+    </article>
+
+    <article>
+      <img src="img/cafe.jpeg" alt="Café">
+      <p>10% Dcto. en menú CAFÉ SIMAN</p>
+    </article>
+
+    <article>
+      <img src="img/comet.jpeg" alt="Comet">
+      <p>10% Dcto. en menú COMET</p>
+    </article>
+
+    <article>
+      <img src="img/san_nicolas.jpeg" alt="Farmacia San Nicolás">
+      <p>30% Dcto. en Farmacia San Nicolás - JULIO</p>
+    </article>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
         <div class="footer-content">
         <div class="footer-section">
             <h3>Enlaces</h3>
@@ -173,7 +174,7 @@
         <p>En Siman.com protegemos tu información. Conoce cómo tratamos tus datos en nuestra Política de Privacidad.
           Estamos registrados en la Defensoría del Consumidor bajo el N° SCE240-07-2024 , cumpliendo con la normativa vigente.
         </p>
-        &copy; 2025 COPYRIGHT ALMACENES SIMAN | RESERVADOS TODOS LOS DERECHOS
+        &copy; 2025 Siman El Salvador | Todos los derechos reservados.
     </div>
 </footer>    
 </body>
