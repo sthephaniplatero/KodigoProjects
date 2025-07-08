@@ -1,37 +1,35 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 img {
   max-width: 100%;
   height: auto;
-  display: block; 
+  display: block;
 }
 
 img[alt="slide"] {
   display: block;
-  margin: 20px auto 0 auto; 
+  margin: 20px auto 0 auto;
   max-width: 100%;
   height: auto;
 }
-/* Barra superior */
-.barra_superior{
-   background: linear-gradient(to right, #cc4e00, #6a0dad);
-   height: 50px;
-   margin: 10px;
- 
-   border-radius: 30px;
-   background-position: center;
-   align-items: center;
-   text-align: center;
-   font-size: 40px;
-   color: white;
-   font-family: ClanOT, Arial;
-   font-weight: bold;
-   
+
+/* BARRA SUPERIOR */
+.barra_superior {
+  background: linear-gradient(to right, #cc4e00, #6a0dad);
+  height: 50px;
+  margin: 10px;
+  border-radius: 30px;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  font-family: ClanOT, Arial;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1024px) {
@@ -42,7 +40,6 @@ img[alt="slide"] {
   }
 }
 
-/* Responsive */
 @media screen and (max-width: 650px) {
   .barra_superior {
     font-size: 24px;
@@ -52,20 +49,19 @@ img[alt="slide"] {
   }
 }
 
-/* Barra de navegacion */
-
+/* BARRA DE NAVEGACION */
 .top_bar {
   overflow: hidden;
   background-color: rgb(168, 51, 56);
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 10px 20px;
   height: 70px;
 }
 
 .top_bar img {
-  height: 20px;   
+  height: 20px;
 }
 
 .top_bar a {
@@ -75,7 +71,6 @@ img[alt="slide"] {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
-  
 }
 
 .top_bar a:hover {
@@ -100,7 +95,6 @@ img[alt="slide"] {
   }
 }
 
-/* Responsive Top Bar */
 @media screen and (max-width: 650px) {
   .top_bar {
     flex-direction: column;
@@ -121,56 +115,55 @@ img[alt="slide"] {
   }
 }
 
-
+/* HERO IMAGE */
 .hero_image {
-  background-image: url("img/hero.jpeg");
-  height: 50vh;
+  min-height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   text-align: center;
   margin: 15px;
-
+  padding: 40px 20px;
+  border-radius: 12px;
 }
-
 
 @media (max-width: 768px) {
   .hero_image {
-    height: 50vh;
+    padding: 30px 15px;
+    min-height: 250px;
   }
-
 }
 
 @media (max-width: 480px) {
   .hero_image {
-    height: 40vh;
+    padding: 20px 10px;
+    min-height: 200px;
   }
 }
 
-.descuento h2{
-    color: #17086c;
-    text-align: center;
-    font-size: 50px;
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 15px;
-
+/* TITULO SECCION DESCUENTO */
+.descuento h2 {
+  color: #17086c;
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px;
 }
 
-
+/* CONTENEDOR TARJETAS Y FORMULARIO */
 .contenedor_tarjetas_formulario {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
   margin-top: 40px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
-/* Tarjetas en columna */
+/* TARJETAS EN COLUMNA */
 .card_container {
   flex: 1;
   display: flex;
@@ -178,17 +171,20 @@ img[alt="slide"] {
   gap: 20px;
 }
 
-/* Formulario a la derecha */
+/* FORMULARIO A LA DERECHA */
 .formulario {
   flex: 1;
   max-width: 500px;
   background-color: #f7f7f7;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+  box-sizing: border-box;
 }
 
-
+/* TARJETA */
 .tarjeta {
   display: flex;
   align-items: center;
@@ -196,7 +192,7 @@ img[alt="slide"] {
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 30px;
 }
 
@@ -205,7 +201,7 @@ img[alt="slide"] {
   width: 350px;
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
 
@@ -223,41 +219,71 @@ img[alt="slide"] {
   padding-left: 20px;
 }
 
-.card1_beneficios h3 {
-  color: #cc4e00;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-
+.card1_beneficios h3,
 .card2_beneficios h3 {
   color: #cc4e00;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-
-/* Responsive para móviles */
-@media (max-width: 900px) {
+/* RESPONSIVE PARA MÓVILES Y TABLETAS */
+@media (max-width: 992px) {
   .contenedor_tarjetas_formulario {
     flex-direction: column;
+    gap: 30px;
   }
 
   .formulario {
     max-width: 100%;
   }
-}
-/* ---------------------------FORMULARIO Y DESCUENTOS---------------------------- */
 
+  .tarjeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card1 img,
+  .card2 img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tarjeta {
+    padding: 15px;
+  }
+
+  .formulario {
+    padding: 20px;
+  }
+
+  .card1_beneficios h3,
+  .card2_beneficios h3 {
+    font-size: 20px;
+  }
+
+  .card1_beneficios ul,
+  .card2_beneficios ul {
+    padding-left: 15px;
+    font-size: 15px;
+  }
+
+  .card1 img,
+  .card2 img {
+    border-radius: 10px;
+  }
+}
+
+/* FORMULARIO */
 form {
   background-color: #ffffff;
   padding: 30px;
-  margin-top: 50px;
+  margin: 0; 
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+  max-width: none; 
+  box-sizing: border-box;
 }
 
 form h1 {
@@ -321,18 +347,75 @@ button[type="submit"]:hover {
   background-color: #a63e00;
 }
 
-/* Descuentos */
+/* RESPONSIVE FORMULARIO */
 
-.descuentos {
-  margin-top: 50px;
+@media (max-width: 992px) {
+  
+  .formulario {
+    max-width: 100%;
+  }
 }
 
-.descuentos h2 {
-  text-align: center;
-  color: #e74707;
-  margin-bottom: 30px;
-  font-size: 50px;
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 500px;
+    box-shadow: none;
+    border-radius: 0;
+    width: 90%; 
+  }
+
+  form h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .radio-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .radio-group label {
+    font-size: 0.95rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+  }
 }
+
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+
+  form h1 {
+    font-size: 20px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+/* DESCUENTOS */
 
 .descuentos {
   margin-top: 50px;
@@ -346,14 +429,14 @@ button[type="submit"]:hover {
   font-size: 48px;
 }
 
-/* Contenedor en grid */
+/* CONTENEDOR EN GRID */
 .descuentos-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
-/* Tarjeta individual */
+/* TARJETA INDIVIDUAL */
 .descuentos article {
   background-color: #fff;
   padding: 25px;
@@ -369,7 +452,7 @@ button[type="submit"]:hover {
   transform: scale(1.03);
 }
 
-/* Imagen más grande */
+/* IMAGEN MÁS GRANDE */
 .descuentos article img {
   width: 100%;
   max-width: 220px;
@@ -378,7 +461,7 @@ button[type="submit"]:hover {
   margin-bottom: 20px;
 }
 
-/* Texto del descuento */
+/* TEXTO DEL DESCUENTO */
 .descuentos article p {
   margin: 0;
   font-size: 18px;
@@ -387,9 +470,18 @@ button[type="submit"]:hover {
   line-height: 1.4;
 }
 
+/* RESPONSIVE DESCUENTOS */
 @media (max-width: 1024px) {
   .descuentos-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .descuentos h2 {
+    font-size: 40px;
+  }
+
+  .descuentos article p {
+    font-size: 16px;
   }
 }
 
@@ -403,152 +495,23 @@ button[type="submit"]:hover {
   }
 
   .descuentos h2 {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .card_container {
-    grid-template-columns: 1fr;
+    font-size: 32px;
   }
 
-  .desc1,
-  .desc2 {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .top_bar {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .top_bar nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero_img img {
-    height: 250px;
-    object-fit: cover;
-  }
-
-  form {
+  .descuentos article {
     padding: 20px;
-    margin: 30px 15px;
   }
 
-  .desc1 img,
-  .desc2 img {
-    width: 100%;
+  .descuentos article img {
+    max-width: 100%;
   }
 
-  .desc1 p,
-  .desc2 p {
+  .descuentos article p {
     font-size: 15px;
   }
-
-  .card1_beneficios ul,
-  .card2_beneficios ul {
-    padding-left: 15px;
-  }
-
-  .desc1,
-  .desc2,
-  .descuentos article {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
-@media (max-width: 480px) {
-  .barra_superior {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .top_bar img {
-    width: 100px;
-  }
-
-  .top_bar nav a {
-    font-size: 14px;
-    margin: 5px 0;
-  }
-
-  .footer-section h3 {
-    font-size: 16px;
-  }
-
-  .footer-bottom {
-    font-size: 12px;
-  }
-
-  button[type="submit"] {
-    width: 100%;
-    padding: 14px;
-  }
-}
-
-/* Footer */
-
-.footer {
-  background-color: #222;
-  color: #fff;
-  padding: 40px 30px;
-  margin-top: 60px;
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.footer-section h3 {
-  border-bottom: 2px solid #cc4e00;
-  padding-bottom: 5px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li a {
-  text-decoration: none;
-  color: #ccc;
-  line-height: 1.8;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #aaa;
-}
-
-.socials img {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-
-
-
-
-/*Footer*/
-
+/* FOOTER */
 
 .footer {
   background-color: #d7d6d6;
@@ -598,16 +561,16 @@ button[type="submit"]:hover {
 }
 
 .footer-bottom {
-  width: 100%; 
+  width: 100%;
   text-align: center;
-  margin: 0; 
+  margin: 0;
   font-size: 15px;
   color: rgb(72, 70, 70);
   background-color: rgb(194, 190, 190);
-  padding: 20px 0; 
+  padding: 20px 0;
   box-sizing: border-box;
 }
 
-footer p{
+footer p {
   color: rgb(72, 70, 70);
 }
