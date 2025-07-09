@@ -1038,6 +1038,23 @@ button[type="submit"]:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .comentarios h2, 
+  .comentarios h4 {
+    font-size: 1.3rem;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comentarios h2, 
+  .comentarios h4 {
+    font-size: 1.1rem;
+    padding: 6px;
+    text-align: center;
+  }
+}
+
 
 /*Footer*/
 
