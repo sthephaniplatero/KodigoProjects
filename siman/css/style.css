@@ -45,7 +45,7 @@ img[alt="slide"] {
 /* Móviles (pantallas pequeñas) */
 @media screen and (max-width: 650px) {
   .barra_superior {
-    font-size: 24px;
+    font-size: 20px;
     height: 40px;
     margin: 5px;
     border-radius: 20px;
@@ -59,68 +59,79 @@ img[alt="slide"] {
   background-color: rgb(168, 51, 56);
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 10px 20px;
   height: 70px;
+  flex-wrap: wrap; 
 }
 
 .top_bar img {
-  height: 20px;   
+  height: 30px;
 }
 
-.top_bar a {
-  float: right;
+/* Agrupar enlaces dentro de un nav */
+.top_bar nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.top_bar nav a {
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 12px;
   text-decoration: none;
-  font-size: 20px;
-  
+  font-size: 18px;
+  transition: all 0.3s;
 }
 
-.top_bar a:hover {
+.top_bar nav a:hover {
   text-decoration: underline;
 }
 
+/* Tablet */
 @media screen and (max-width: 1024px) {
   .top_bar {
     flex-direction: column;
+    align-items: center;
     height: auto;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .top_bar a {
-    font-size: 18px;
     padding: 10px;
   }
 
   .top_bar img {
-    height: 24px;
+    height: 28px;
+    margin-bottom: 10px;
+  }
+
+  .top_bar nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .top_bar nav a {
+    font-size: 17px;
+    padding: 8px 10px;
   }
 }
 
 /* Móviles */
 @media screen and (max-width: 650px) {
-  .top_bar {
+  .top_bar nav {
     flex-direction: column;
     align-items: center;
-    height: auto;
-    padding: 8px;
+    gap: 8px;
   }
 
-  .top_bar a {
-    display: block;
-    padding: 8px;
+  .top_bar nav a {
     font-size: 16px;
+    padding: 6px 12px;
   }
 
   .top_bar img {
-    height: 26px;
+    height: 24px;
     margin-bottom: 5px;
   }
 }
-
 /*Slide*/
 
 img {vertical-align: middle;}
@@ -237,10 +248,10 @@ html {
 }
 
 .card img:hover {
-   /* Start the shake animation and make the animation last for 0.5 seconds */
+   
   animation: shake 0.5s;
 
-  /* When the animation is finished, start again */
+  
   animation-iteration-count: infinite;
   
 }
@@ -270,6 +281,10 @@ html {
 
 .container h2{
   color: rgb(243, 27, 38);
+    text-align: left;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 .container h5{
@@ -278,7 +293,11 @@ html {
 }
 
 .container h4{
-  color: blue;
+  color:blue;
+  text-align: left;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 
 }
 
@@ -320,6 +339,704 @@ html {
 
 /* <---------------- ESTILO DE EVENTOS--------------->*/
 
+
+main h2{
+    color: #cc4e00;
+    text-align: center;
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 15px;
+}
+
+main h4{
+    color: #cc4e00;
+    text-align: center;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 15px;
+}
+
+
+.evento_info h2 {
+  color: #cc4e00;
+  text-align: left;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+
+.evento_info h2:hover {
+  color: #6a0dad;             
+  text-decoration: underline; 
+}
+
+.evento_info p{
+    color: rgb(94, 91, 91);
+    text-align: left;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 15px;
+
+}
+
+.evento_info h4{
+    color: #cc4e00;
+    text-align: left;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 15px;
+
+}
+
+.evento_info h3{
+     color: rgb(94, 91, 91);
+    text-align: left;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 15px;
+
+}
+
+.evento_izquierda,
+.evento_derecha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+
+.evento_izquierda img,
+.evento_derecha img {
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evento_izquierda img:hover,
+.evento_derecha img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.evento_info {
+  flex: 1;
+  max-width: 500px;
+  background-color: #f8f8f8; 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.evento_izquierda {
+  flex-direction: row; 
+}
+
+.evento_derecha {
+  flex-direction: row-reverse; 
+}
+
+/* Responsivo:  pantallas pequeñas */
+@media (max-width: 768px) {
+  .evento_izquierda,
+  .evento_derecha {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .evento_info {
+    max-width: 100%;
+  }
+
+  .evento_izquierda img,
+  .evento_derecha img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/*---------------------ESTILO DESCUENTOS------------------*/
+
+
+/* HERO IMAGE */
+.hero_image {
+  min-height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 15px;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .hero_image {
+    padding: 30px 15px;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_image {
+    padding: 20px 10px;
+    min-height: 200px;
+  }
+}
+
+/* TITULO SECCION DESCUENTO */
+.descuento h2 {
+  color: #17086c;
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px;
+}
+
+/* CONTENEDOR TARJETAS Y FORMULARIO */
+.contenedor_tarjetas_formulario {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* TARJETAS EN COLUMNA */
+.card_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* FORMULARIO A LA DERECHA */
+.formulario {
+  flex: 1;
+  max-width: 500px;
+  background-color: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* TARJETA */
+.tarjeta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.card1 img,
+.card2 img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.card1_beneficios,
+.card2_beneficios {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.card1_beneficios ul,
+.card2_beneficios ul {
+  padding-left: 20px;
+}
+
+.card1_beneficios h3,
+.card2_beneficios h3 {
+  color: #cc4e00;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE PARA MÓVILES Y TABLETAS */
+@media (max-width: 992px) {
+  .contenedor_tarjetas_formulario {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .formulario {
+    max-width: 100%;
+  }
+
+  .tarjeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card1 img,
+  .card2 img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tarjeta {
+    padding: 15px;
+  }
+
+  .formulario {
+    padding: 20px;
+  }
+
+  .card1_beneficios h3,
+  .card2_beneficios h3 {
+    font-size: 20px;
+  }
+
+  .card1_beneficios ul,
+  .card2_beneficios ul {
+    padding-left: 15px;
+    font-size: 15px;
+  }
+
+  .card1 img,
+  .card2 img {
+    border-radius: 10px;
+  }
+}
+
+/* FORMULARIO */
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 0; 
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+  max-width: none; 
+  box-sizing: border-box;
+}
+
+form h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #cc4e00;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.radio-group {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-group input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.radio-group label {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+}
+
+button[type="submit"] {
+  background-color: #cc4e00;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #a63e00;
+}
+
+/* RESPONSIVE FORMULARIO */
+
+@media (max-width: 992px) {
+  
+  .formulario {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 500px;
+    box-shadow: none;
+    border-radius: 0;
+    width: 90%; 
+  }
+
+  form h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .radio-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .radio-group label {
+    font-size: 0.95rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+
+  form h1 {
+    font-size: 20px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+/* DESCUENTOS */
+
+.descuentos {
+  margin-top: 50px;
+  padding: 0 40px;
+}
+
+.descuentos h2 {
+  text-align: center;
+  color: #e74707;
+  margin-bottom: 40px;
+  font-size: 48px;
+}
+
+/* CONTENEDOR EN GRID */
+.descuentos-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* TARJETA INDIVIDUAL */
+.descuentos article {
+  background-color: #fff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.descuentos article:hover {
+  transform: scale(1.03);
+}
+
+/* IMAGEN MÁS GRANDE */
+.descuentos article img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* TEXTO DEL DESCUENTO */
+.descuentos article p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE DESCUENTOS */
+@media (max-width: 1024px) {
+  .descuentos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .descuentos h2 {
+    font-size: 40px;
+  }
+
+  .descuentos article p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .descuentos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .descuentos {
+    padding: 0 20px;
+  }
+
+  .descuentos h2 {
+    font-size: 32px;
+  }
+
+  .descuentos article {
+    padding: 20px;
+  }
+
+  .descuentos article img {
+    max-width: 100%;
+  }
+
+  .descuentos article p {
+    font-size: 15px;
+  }
+}
+
+
+/*--------------------------PRODUCTO-------------------------*/
+.pagina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo principal del producto */
+.producto {
+  flex: 2;
+  max-width: 60%;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #e0dbde;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del producto */
+.product_image {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #d7d4d6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product_image:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor lateral */
+.container_producto1 {
+  flex: 1;
+  max-width: 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #e0dbde;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.mas_vendido_image {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.container_producto1 h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.container_producto1 h4 {
+  font-size: 1.5em;
+  margin: 5px;
+  color: blue;
+}
+
+.container_producto1 h5 {
+  margin: 5px;
+  color: red;
+  font-size: 1em;
+}
+
+.container_producto1 h3 {
+  color: red;
+  margin: 10px 0 15px;
+}
+
+.container_producto1 button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.container_producto1 button:hover {
+  background-color: #dd3030d5;
+}
+
+/* Comentarios */
+.comentarios {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #e1dcde;
+  border-radius: 12px;
+  border: 2px solid #f2eef2;
+  text-align: center;
+}
+
+.comentarios p {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  resize: vertical;
+  font-size: 1em;
+  text-align: left;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: #4a4848;
+}
+
+.comentarios h2,
+.comentarios h4 {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto, 
+  .container_producto1 {
+    max-width: 90%;
+    flex: 1 1 100%;
+  }
+
+  .product_image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container_producto1 h2,
+  .container_producto1 h3,
+  .container_producto1 h4,
+  .container_producto1 h5 {
+    font-size: 1em;
+  }
+
+  .container_producto1 button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .comentarios {
+    padding: 10px;
+  }
+
+  .comentarios p {
+    font-size: 0.9em;
+  }
+
+  .product_image {
+    width: 100%;
+  }
+}
 
 
 /*Footer*/
